@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import './App.css'
+import React, { useMemo, useState } from 'react'
+import './app.css'
 
 type RowValue = string | number
 
@@ -232,7 +232,7 @@ const actionItems = panels.reduce(
   0,
 )
 
-function App() {
+export function App() {
   const [activePanelId, setActivePanelId] = useState(panels[0].id)
   const [sortState, setSortState] = useState<SortState>({
     column: panels[0].columns[0].key,
@@ -378,4 +378,3 @@ function App() {
   )
 }
 
-export default App
